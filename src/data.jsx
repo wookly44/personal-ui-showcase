@@ -93,10 +93,10 @@ export const projectDatas = [{
     bgImg: 'assets/port.jpg',
     btn1: 'go site',
     btn1Img: site,
-    btn1Link: 'https://wookly44.github.io/Portfolio/',
+    btn1Link: 'https://wookly44.github.io/personal-ui-showcase/',
     btn2: 'github',
     btn2Img: git,
-    btn2Link: 'https://github.com/wookly44/Portfolio',
+    btn2Link: 'https://github.com/wookly44/personal-ui-showcase',
 }
 ];
 

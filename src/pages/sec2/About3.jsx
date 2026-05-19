@@ -18,7 +18,7 @@ const About3 = () => {
         {
             text: 'View Source Code',
             Img: 'assets/git_bg.png',
-            link: 'https://github.com/wookly44/Portfolio'
+            link: 'https://github.com/wookly44/personal-ui-showcase'
         },{   
             text: 'Go to Main Portfolio',
             Img: 'assets/web.png',

@@ -55,7 +55,6 @@ function Portfolio(){
               <div className="panel__content-col">
                   <div className="panel__content" ref={pContentRef}>
                       <div className="panel__text">
-                          <h1 className="panel__title">My Path in Tech</h1>
                           <p className="panel__addr">
                             <span></span>
                             GSAP & UI Animation Showcase
@@ -65,7 +64,7 @@ function Portfolio(){
                   </div>
               </div>
               <div className="panel__img-col" ref={imgRef}>
-                  <img src="assets/main_img2.webp" alt="main image" className="panel__img"/>
+                  <img src="assets/main_img2.png" alt="main image" className="panel__img"/>
               </div>
           </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div id='ABOUT' className="About" ref={aboutRef}>
-      <div className="AboutLeft" ref={aboutImgRef} style={{backgroundImage: 'url(assets/main_img1.jpg)'}}></div>
+      <div className="AboutLeft" ref={aboutImgRef} style={{backgroundImage: 'url(assets/main_img1.webp)'}}></div>
       <div className="AboutRight">
           <About1/>
           <About2/>
