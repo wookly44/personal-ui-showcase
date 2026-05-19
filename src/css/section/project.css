@@ -1,0 +1,102 @@
+/* section3 : Project */
+.Project{
+    font-size: 3.65vw;
+}
+.ProjectTitleWrap{
+    width: 100%; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proTitWrap{
+    position: sticky;
+    left: 0; top: 0;
+}
+.ProjectTitleWrap>div{
+    text-align: center;
+}
+.ProjectTitle1, .ProjectTitle2 {
+    will-change: transform;
+}
+.ProjectTitle1{
+    width: 100%;
+    font-size: max(4.2rem, 4.9vw);
+    font-family: "Playfair Display";
+}
+.ProjectTitle2{
+    width: 100%;
+    font-size: max(4.2rem, 4.9vw);
+    font-family: "Playfair Display";
+    margin-top: -10px;
+}
+.ProjectSite{
+    width: 100%; height: 100vh;
+    position: sticky;
+    left: 0; top: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ProjectSite:after{ 
+    content:""; 
+    display:block; 
+    position:absolute; 
+    top:0; right:0; bottom:0; left:0; 
+    background-color:rgba(0,0,0,0.5); 
+}
+.ProWrap{
+    position: absolute;
+    z-index: 1;
+    width: 100%; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    gap: var(--txt-gap);
+}
+.ProTitle{
+    font-size: var(--main-tit-font2);
+    font-family: "Playfair Display";
+    text-align: center;
+    width: 90%;
+}
+.ProTeam{
+    font-size: var(--tit-pink-font);
+    color: var(--point-color);
+}
+.ProText{
+    width: 40%;
+    font-size: var(--sub-txt-big-font);
+    text-align: center;
+    margin-bottom: 1vw;
+    line-height: 1.5;
+} 
+@media (max-width: 1050px) {
+    .ProText{
+        width: 50%;
+    }
+}
+.ProDate{
+    font-size: var(--sub-txt-font);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.Front .btnWrap>button:nth-child(3){
+    display: none;
+}
+.Front .btnWrap>button:nth-child(4){
+    display: none;
+}
+.Port .btnWrap>button:nth-child(4){
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .ProText{
+        width: 70%;
+    }
+}

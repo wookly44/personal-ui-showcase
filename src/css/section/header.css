@@ -1,0 +1,412 @@
+/* navigation */
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    min-width: 360px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    backdrop-filter: blur(15px);
+    background-color: hsla(0, 8%, 42%, .1);
+    position: relative;
+    overflow: hidden;
+}
+.navLogo{
+    width: 90px;
+}
+.navLogo img{
+    width: 100%;
+}
+.navInfo{
+    display: flex;
+    gap: 20px;
+}
+.navInfo a{
+    font-size: max(1rem, 0.8vw);
+    color: rgb(146, 146, 146);
+}
+.navR{
+    cursor: pointer;
+}
+.navContact{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.navContact p, .closes{
+    font-size: max(1rem, 0.8vw);
+    color: rgb(146, 146, 146);
+    position: relative;
+    white-space: nowrap;
+}
+.navR .navContact>p::after{
+    content: "CONNECT";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    color: #eeede9;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s ease-out width;
+}
+.navR:hover .navContact>p::after{
+    width: 100%;
+}
+.navContact>div{
+    width: 3.5rem; height: 3.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    background-color: hsla(0, 8%, 42%, .2);
+}
+.navR .navContact>div::after{
+    content: '';
+    display: block;
+    background-color: #929292;
+    border-radius: 0.4rem;
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    transform-origin: top left;
+    transform: scale(0) rotate(-45deg);
+    transition: transform 0.8s cubic-bezier(.22,1,.36,1);
+}
+.navContact>div>p{
+    color: rgb(146, 146, 146); transform: translate(0);
+}
+.navR:hover .navContact>div>p{
+    color: #eeede9;
+    transition: 0.8s;
+}
+.navR:hover .navContact>div::after{
+    transform: scale(1) rotate(0);
+    transform-origin: top right;
+    transition: 0.8s cubic-bezier(.22,1,.36,1);
+    transition-timing-function: cubic-bezier(.84,0,.16,1);
+}
+.navInfo{
+    position: relative;
+}
+.navInfo>li:nth-child(1)>a::after{
+    content: 'ABOUT';   
+}
+.navInfo>li:nth-child(2)>a::after{
+    content: 'PROJECT';   
+}
+.navInfo>li:nth-child(3)>a::after{
+    content: 'TOY';   
+}
+.navInfo>li:nth-child(4)>a::after{
+    content: 'CLONE';   
+}
+.navInfo>li>a::after{
+    display: block;
+    position: absolute;
+    top: 0;
+    color: #eeede9;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.6s ease-out width;
+}
+.navInfo>li>a:hover::after{
+    width: 30%;
+}
+
+.navColor{
+    backdrop-filter: none;
+    background-color: transparent;
+}
+/* subNav--------------------------------- */
+.subNavWrap{
+    width: 100%; height: 100%;
+    position: fixed;
+    top: 0; right: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: -1;
+    transition: 0.6s ease-in-out;
+}
+.subNavWrapOpen{
+    left: 0;
+    backdrop-filter: blur(2.5rem);
+    transition: 0.6s ease-in-out;
+}
+.subNav{
+    width: 60.73333vw;
+    height: calc(100% - 1rem);
+    background-color: #eeede9;
+    transition: transform 1s cubic-bezier(.22,1,.36,1);
+    border-radius: 0.4rem;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+    position: relative;
+    right: -100%;
+}
+.subNavOpen{
+    right: 0;
+    transition: 0.6s ease-in-out;
+}
+.subNav>ul{ 
+    transition: transform 1s cubic-bezier(.22,1,.36,1);
+    padding-bottom: 10px;
+}
+.subList{
+    font-size: 2.6rem;
+    letter-spacing: -0.025em;
+    color: #929292;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.subList>a{
+    color: #929292;
+}
+.subNav>div{
+    border-top: .1rem solid hsla(0,0%,57%,.2);
+    border-bottom: .1rem solid hsla(0,0%,57%,.2);
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    color: #929292;
+    padding: 2.63889vw 0 2.77778vw;
+}
+.subNav>div>p{
+    font-size: max(5vw, 3vw);
+}
+.subNavContactWrap{
+    display: inline-block;
+}
+.subNavContact{
+    cursor: pointer;
+    display: flex;
+    font-size: 2.2rem;
+    padding-top: 0.7vw;
+    align-items: center;
+    gap: 5px;
+}
+.subNavContact>div{
+    width: 4.5rem; height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    background-color: hsla(0, 8%, 42%, .2);
+    position: relative;
+}
+.subNavContact>div::after{
+    content: '';
+    display: block;
+    background-color: #929292;
+    border-radius: 0.4rem;
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    transform-origin: top left;
+    transform: scale(0) rotate(-45deg);
+    transition: transform 0.8s cubic-bezier(.22,1,.36,1);
+}
+.subNavContact:hover>div::after{
+    transform: scale(1) rotate(0);
+    transform-origin: top right;
+    transition: 0.8s cubic-bezier(.22,1,.36,1);
+    transition-timing-function: cubic-bezier(.84,0,.16,1);
+}
+.subNavContact>div>p{
+    color: rgb(146, 146, 146); transform: translate(0);
+    z-index: 1;
+}
+.subNavContact:hover>div>p{
+    color: #eeede9;
+    transition: 0.8s;
+}
+.subMyInfo{
+    padding: 1.38889vw 0 0;
+}
+.subMyInfo>li{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+.subMyInfo>li:nth-child(1){
+    margin-bottom: 1vw;
+}
+.contactName{
+    font-size: max(1.2rem, 1.3vw);
+    font-weight: bold;
+    color: #929292;
+}
+.contactInfo{
+    font-size: max(1rem, 0.7vw);
+    color: #929292;
+
+}
+.subMyInfo img{
+    width: max(2rem, 1.1vw);
+    margin-top: 1px;
+}
+@media (max-width: 750px) {
+    .navInfo{
+        display: none;
+    }
+    .navR{
+        display: flex;
+        gap: 3px;
+    }
+    .navContact>p{
+        height: 4.2rem;
+        padding: 0 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #929292;
+        border-radius: 0.4rem;
+        color: #eeede9;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        color: #eeede9;
+    }
+    .navContact>div{
+        display: none;
+    }
+    .navR .navContact>p::after{
+        display: none;
+    }
+    .navHam{
+        width: 4.2rem; height: 4.2rem;
+        background-color: #929292;
+        border-radius: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        position: relative;
+    }
+    .navHam>span{
+        width: 20px; height: 2px;
+        background-color: #eeede9;
+        transition: 0.6s ease-out;
+    }
+    .navHam>span:nth-child(2){
+        width: 15px;
+        margin-right: 5px;
+    }
+    .subRotR{
+        transition: 0.6s ease-out;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        position: absolute;
+        top: 50%;
+    }
+    .subRotC{
+        opacity: 0;
+        transition: 0.6s ease-out;
+    }
+    .subRotL{
+        position: absolute;
+        top: 50%;
+        transition: 0.6s ease-out;
+        transform: rotate(-45deg);
+    }
+    .subNav{
+        width: 80.73333vw;
+    }
+}
+
+
+
+
+/* mail */
+.emailWrap{
+    width: 100vw; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mailForm{
+    width: 50%; height: 90vh;
+    background-color: #eeede9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 0.4rem;
+    padding: 30px;
+}
+.mailForm>h1{
+    color: #929292;
+    font-size: max(2rem, 3vw);
+}
+.mailForm>div{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 10px;
+}
+.mailForm>div>label{
+    display: block;
+    color: #929292;
+    font-size: 2rem;
+    letter-spacing: -0.025em;
+    font-weight: bold;
+}
+.mailForm>div:not(:nth-child(5))>input{
+    display: block;
+    width: 100%;
+    border-radius: 0.4rem;
+    color: var(--black-color);
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #929292;
+    background-color: #eeede9;
+}
+.mailForm>div>textarea{
+    display: block;
+    width: 100%; height: 200px;
+    border-radius: 0.4rem;
+    color: var(--black-color);
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #929292;
+    background-color: #eeede9;
+}
+.mailForm>div:nth-child(5){
+    width: 95%;
+    display: flex;
+    align-items: end;
+}
+.mailBtn{
+    width: 100px;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+@media (max-width: 750px) {
+    .mailForm{
+        width: 90%;
+        gap: 20px;
+        padding: 30px;
+    }
+    .mailForm>div>label{
+        font-size: 2.3rem;
+    }
+    .mailForm>div>input{
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,75 @@
+/* Playfair */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-style: normal;
+}
+#root{
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 100%;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    min-width: 360px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+li{
+    list-style: none;
+}
+main{
+    --bg-color : #151515;
+    background-color: var(--bg-color);
+}
+
+/* root */
+:root{
+    --main-tit-font : max(4rem, 4.2vw);
+    --main-tit-font2 : max(4rem, 3.5vw);
+    --main-txt-font : max(1rem, 1.25vw);
+
+    --tit-pink-font : max(1.1rem, 1.04vw);
+    --sub-txt-font : max(1rem, 0.7vw);
+    --sub-txt-big-font : max(1rem, 0.8vw);
+
+    --sec-padding-left : 6.98vw;
+    --txt-gap : max(1.5rem, 1vw);
+    --txt-inner-gap : 1.58vw;
+    --txt-line-height : 1.8vw;
+    
+    --main-color : #FEADB3;
+    --point-color : #FF6585;
+    --black-color : #151515;
+    --white-color : #F8F8F4;
+
+
+    @media (max-width: 750px) {
+        --main-tit-font2 : max(4rem, 8.17vw);
+
+        --tit-pink-font : max(1.1rem, 2vw);
+        --sub-txt-font : max(1rem, 1.7vw);
+        --sub-txt-big-font : max(1rem, 1.7vw);
+
+        --sec-padding-left : 8.5vw;
+        --txt-gap : 2.5vw;
+        --txt-inner-gap : 2.9vw;
+        --txt-line-height : 2.5vw;
+    }
+
+    @media (max-width: 435px) {
+        --sec-padding-left : 6.5vw;
+        --txt-line-height : 3.5vw;
+    }
+}

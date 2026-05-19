@@ -1,0 +1,123 @@
+/* section4 : toy */
+.Toy{
+    width: 100%;
+    overflow: hidden;
+}
+.Toy>div{
+    display: flex;
+}
+.toyTxtWrap{
+    width: calc(100vw - 20px); height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes rotate {
+  0% {
+      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+  }
+  100% {
+      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+  }
+}
+.sta{
+    width: 100%; height: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    color: var(--white-color);
+}
+.stars {
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    perspective-origin: 50% 100%;
+    left: 50%;
+    animation: rotate 90s infinite linear;
+}
+.star {
+    width: 2px;
+    height: 2px;
+    background: #F7F7B6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0 -300px;
+    transform: translate3d(0, 0, -300px);
+    backface-visibility: hidden;
+}
+.starTit{
+    width: 100vw; height: 100%;
+    overflow: hidden;
+}
+.toyTitWrap{
+    position: absolute;
+}
+.toyTitWrap h1{
+    color: var(--white-color);
+}
+.ToyInfo{
+    width: 100vw; height: 100vh;
+    display: flex;
+    border-left: 30px solid var(--point-color);
+}
+.ToyInfo>li{
+    flex: 1;
+}
+.ToyImg{
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ToyTitle{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--txt-gap);
+    padding-left: 50px;
+}
+.ToyTitle>p{
+    font-size: var(--main-tit-font);
+    font-family: "Playfair Display";
+    color: var(--white-color);
+}
+.ToyTitle>span{
+    width: 70%;
+    font-size: var(--sub-txt-font);
+    font-family: "Playfair Display";
+    color: var(--white-color);
+}
+.ToyTitle>span.point{
+    color: var(--point-color);
+}
+
+@media (max-width: 750px) {
+    .Toy>div{
+        display: block;
+    }
+    .ToyInfo{
+        border-left: none;
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    .ToyInfo>li{
+        width: 100%;
+        height: 100vh;
+        flex: none;
+        position: absolute;
+    }
+    .ToyTitle{
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+    }
+    .ToyImg{
+        top: 0; left: 0;
+        filter: brightness(0.4);
+    }
+}
