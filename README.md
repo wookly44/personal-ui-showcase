@@ -1,6 +1,7 @@
 # interactive-ui-lab <img src="https://github.com/user-attachments/assets/2158c366-9312-4a02-8fd0-03944832805d" align=left width=70>
 
 > GSAP 고성능 애니메이션 최적화 및 비동기 이메일 시스템을 실험하는 프론트엔드 UI 쇼케이스
+<img width="1242" height="824" alt="project_uiShowCase" src="https://github.com/user-attachments/assets/5e0595f4-39a2-4873-ac33-537ed7253b98" />
 
 <br/>
 
