@@ -7,7 +7,6 @@
 
 ## 🔗 링크
 - **배포 링크**: [바로가기](https://wookly44.github.io/personal-ui-showcase)
-- **GitHub Repository**: [바로가기](https://github.com/wookly44/personal-ui-showcase)
 
 <br/>
 
